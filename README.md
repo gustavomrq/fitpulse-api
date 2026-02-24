@@ -74,7 +74,7 @@ README.md → Project description
 
 1️⃣ Clone the repository
 
-git clone https://github.com/gustavomrq/fitpulse.git
+git clone https://github.com/gustavomrq/fitpulse-api.git
 
 2️⃣ Navigate into the project folder
 
