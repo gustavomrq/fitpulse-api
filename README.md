@@ -27,6 +27,14 @@ Control internal store sales
 
 Maintain audit logs for system security
 
+👥 Team Members
+
+Diego Santos – Manager;
+Luis Gustavo – Back-end Developer (Database Modeling, API Development, Business Logic);
+Livia Karoliny – Front-end Developer;
+Guilherme Yuri – Assistant & Tester;
+Gilles Gael – Testing & Validation
+
 🛠 Technologies & Tools Used
 💻 Back-end
 
@@ -55,14 +63,6 @@ GitHub
 📋 Team Management & Communication
 
 Trello
-
-👥 Team Members
-
-Diego Santos – Manager
-Luis Gustavo – Back-end Developer (Database Modeling, API Development, Business Logic)
-Livia Karoliny – Front-end Developer
-Guilherme Yuri – Assistant & Tester
-Gilles Gael – Testing & Validation
 
 🗂 Project Structure
 
