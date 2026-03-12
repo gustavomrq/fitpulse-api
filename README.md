@@ -1,6 +1,6 @@
 # FitPulse API
 
-FitPulse is a backend system developed with **Laravel** for managing gym students.
+FitPulse is a system developed with **Laravel** for managing gym students.
 
 ---
 
