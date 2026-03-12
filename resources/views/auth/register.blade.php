@@ -1,52 +1,47 @@
 <x-guest-layout>
+
+    <h2 style="font-family: var(--font-primary); font-size: 28px; letter-spacing: 2px; margin-bottom: 24px; color: var(--text);">
+        CRIAR CONTA
+    </h2>
+
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        {{-- Nome --}}
+        <div class="auth-field">
+            <label for="name">Nome</label>
+            <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+            @error('name') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        {{-- Email --}}
+        <div class="auth-field">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
+            @error('email') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        {{-- Senha --}}
+        <div class="auth-field">
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" required autocomplete="new-password" />
+            @error('password') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        {{-- Confirmar Senha --}}
+        <div class="auth-field">
+            <label for="password_confirmation">Confirmar Senha</label>
+            <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
+            @error('password_confirmation') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
+        <div class="auth-actions">
+            <a class="auth-link" href="{{ route('login') }}">Já tem conta?</a>
+            <button type="submit" class="auth-btn-primary">
+                <i class="fa-solid fa-dumbbell"></i> REGISTRAR
+            </button>
         </div>
+
     </form>
+
 </x-guest-layout>
