@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Rules\ValidNomeAluno;
 
 class StudentController extends Controller
 {
@@ -35,7 +36,8 @@ class StudentController extends Controller
         'biometric_id' => $request->biometric_id,
         'rfid_tag' => $request->rfid_tag,
         'birth_date' => $request->birth_date,
-        'is_defaulter' => $request->is_defaulter
+        'is_defaulter' => $request->is_defaulter,
+        'name' => ['required', 'string', 'max:255', new ValidNomeAluno]
     ]);
 
     return redirect('/students');
@@ -70,7 +72,8 @@ class StudentController extends Controller
         'biometric_id' => $request->biometric_id,
         'rfid_tag' => $request->rfid_tag,
         'birth_date' => $request->birth_date,
-        'is_defaulter' => $request->is_defaulter
+        'is_defaulter' => $request->is_defaulter,
+        'name' => ['required', 'string', 'max:255', new ValidNomeAluno]
     ]);
 
     return redirect('/students');
