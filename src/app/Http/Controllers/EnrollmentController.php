@@ -28,7 +28,13 @@ class EnrollmentController extends Controller
             return redirect()->route('dashboard');
         }
 
-        $plans = Plan::active()->orderedByPrice()->get();
+        $plans = Plan::active()
+            ->where(function ($query) {
+                $query->where('is_trial', false)
+                    ->orWhereNull('is_trial');
+            })
+            ->orderedByPrice()
+            ->get();
         $weekDays = StudentSchedule::weekDays();
         $shiftLabels = StudentSchedule::shiftLabels();
         $selectedSchedule = $student
@@ -162,7 +168,12 @@ class EnrollmentController extends Controller
         // --------------------------------------------------------------
         // 3. Processar plano, agenda e matrícula
         // --------------------------------------------------------------
-        $plan      = Plan::where('status', 'active')->findOrFail($request->plan_id);
+        $plan      = Plan::where('status', 'active')
+            ->where(function ($query) {
+                $query->where('is_trial', false)
+                    ->orWhereNull('is_trial');
+            })
+            ->findOrFail($request->plan_id);
         $startDate = Carbon::today();
         $endDate   = $startDate->copy()->addDays($plan->duration_days);
 

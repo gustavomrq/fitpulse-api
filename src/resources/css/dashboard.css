@@ -3676,6 +3676,108 @@ div[style*="border-radius:20px"] h3::before {
     color: #111 !important;
 }
 
+/* -- Modal editar equipamento - LIGHT ---------------------- */
+[data-theme="light"] #eq-edit-modal-overlay {
+    background: rgba(17,17,17,0.34) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay > div {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.16) !important;
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay > div > div:first-child {
+    border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay > div > div:first-child p {
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .shop-modal__close {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    color: rgba(0,0,0,0.48) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .shop-modal__close:hover {
+    background: rgba(214,21,50,0.08) !important;
+    border-color: rgba(214,21,50,0.22) !important;
+    color: #b91c1c !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .ev-label {
+    color: rgba(17,17,17,0.64) !important;
+}
+
+[data-theme="light"] #eq-edit-code {
+    background: #f5f5f5 !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    color: rgba(17,17,17,0.58) !important;
+}
+
+[data-theme="light"] #eq-edit-name.ev-input {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.12) !important;
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-edit-name.ev-input:focus {
+    border-color: rgba(214,21,50,0.55) !important;
+    box-shadow: 0 0 0 3px rgba(214,21,50,0.08) !important;
+}
+
+[data-theme="light"] #eq-edit-name.ev-input::placeholder {
+    color: rgba(17,17,17,0.38) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .eq-status-pill {
+    background: #f7f7f7 !important;
+    border-color: rgba(0,0,0,0.12) !important;
+    color: rgba(17,17,17,0.62) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .eq-status-radio:hover .eq-status-pill {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.22) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .eq-status-radio input:checked + .eq-status-pill.eq-status-pill--ativo {
+    background: rgba(22,163,74,0.10) !important;
+    border-color: rgba(22,163,74,0.34) !important;
+    color: #15803d !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .eq-status-radio input:checked + .eq-status-pill.eq-status-pill--manutencao {
+    background: rgba(217,119,6,0.10) !important;
+    border-color: rgba(217,119,6,0.32) !important;
+    color: #b45309 !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .eq-status-radio input:checked + .eq-status-pill.eq-status-pill--inativo {
+    background: rgba(220,38,38,0.09) !important;
+    border-color: rgba(220,38,38,0.28) !important;
+    color: #b91c1c !important;
+}
+
+[data-theme="light"] #eq-edit-status-hint {
+    color: rgba(17,17,17,0.58) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .shop-modal__btn-cancel {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    color: rgba(17,17,17,0.62) !important;
+}
+
+[data-theme="light"] #eq-edit-modal-overlay .shop-modal__btn-cancel:hover {
+    background: rgba(0,0,0,0.08) !important;
+    border-color: rgba(0,0,0,0.18) !important;
+    color: #111111 !important;
+}
+
 /* ── Modal de notificação — ícone amarelo e mensagem ─────── */
 [data-theme="light"] #maint-notify-overlay > div > div:first-child > div:first-child > div {
     /* caixa do ícone de aviso — mantém amarelo */
@@ -4025,5 +4127,139 @@ button.student-action-card--blue:hover {
 
     .eval-student-metrics .eval-chevron {
         margin-left: auto;
+    }
+}
+
+.shop-manager-low-stock-hint {
+    color: rgba(255,255,255,0.48);
+    font-weight: 400;
+}
+
+[data-theme="light"] .shop-manager-low-stock-hint {
+    color: rgba(17,17,17,0.58) !important;
+}
+
+.shop-manager-field-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 18px;
+    white-space: nowrap;
+}
+
+.shop-manager-actions {
+    align-items: center !important;
+}
+
+.shop-manager-actions .btn-save,
+.shop-manager-actions .btn-ghost {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    margin: 0;
+    padding: 0 24px !important;
+    line-height: 1;
+}
+
+.shop-manager-actions #product-message {
+    align-self: center;
+    line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+    #eq-edit-modal-overlay {
+        padding: 12px !important;
+    }
+
+    #eq-edit-modal-overlay > div {
+        max-height: calc(100dvh - 24px) !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #eq-edit-modal-overlay > div > div:nth-child(2) {
+        overflow-y: auto !important;
+        padding: 18px !important;
+    }
+
+    #eq-edit-modal-overlay .eq-edit-modal__footer {
+        flex-direction: column !important;
+        padding: 0 18px 18px !important;
+    }
+
+    #eq-edit-modal-overlay .eq-edit-modal__footer .shop-modal__btn-cancel,
+    #eq-edit-modal-overlay .eq-edit-modal__footer .shop-modal__btn-confirm {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay {
+    background: rgba(17,17,17,0.34) !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay > div {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.16) !important;
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay > div > div:first-child > p:first-of-type {
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-inactivate-name,
+[data-theme="light"] #eq-inactivate-modal-overlay > div > div:first-child > p:last-child {
+    color: rgba(17,17,17,0.62) !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay .btn-ghost {
+    background: #f3f4f6 !important;
+    border-color: rgba(0,0,0,0.10) !important;
+    color: rgba(17,17,17,0.68) !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay .btn-ghost:hover {
+    background: #e5e7eb !important;
+    border-color: rgba(0,0,0,0.18) !important;
+    color: #111111 !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay .btn-del {
+    background: rgba(214,21,50,0.08) !important;
+    border-color: rgba(214,21,50,0.28) !important;
+    color: #b91c1c !important;
+}
+
+[data-theme="light"] #eq-inactivate-modal-overlay .btn-del:hover {
+    background: rgba(214,21,50,0.14) !important;
+    border-color: rgba(214,21,50,0.42) !important;
+}
+
+@media (max-width: 640px) {
+    #eq-inactivate-modal-overlay {
+        padding: 12px !important;
+    }
+
+    #eq-inactivate-modal-overlay > div {
+        max-width: 100% !important;
+        border-radius: 18px !important;
+    }
+
+    #eq-inactivate-modal-overlay > div > div:last-child {
+        flex-direction: column !important;
+        padding: 0 18px 18px !important;
+    }
+
+    #eq-inactivate-modal-overlay > div > div:last-child .btn-ghost,
+    #eq-inactivate-modal-overlay > div > div:last-child .btn-del {
+        justify-content: center !important;
+        width: 100% !important;
+        min-width: 0 !important;
     }
 }

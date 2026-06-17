@@ -59,14 +59,14 @@
                         </div>
 
                         {{-- ESTOQUE --}}
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-                            <label style="display:grid; gap:6px; font-size:12px; color:rgba(255,255,255,0.75);">
-                                Estoque inicial
+                        <div class="shop-manager-stock-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                            <label class="shop-manager-field-label" style="display:grid; gap:6px; font-size:12px; color:rgba(255,255,255,0.75);">
+                                <span class="shop-manager-field-title">Estoque inicial</span>
                                 <input id="product-stock" type="number" name="stock" min="0" value="0"
                                     style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.05); color:#fff;" />
                             </label>
-                            <label style="display:grid; gap:6px; font-size:12px; color:rgba(255,255,255,0.75);">
-                                Estoque mínimo <span style="color:rgba(255,255,255,0.40); font-weight:400;">(alerta de baixo estoque)</span>
+                            <label class="shop-manager-field-label" style="display:grid; gap:6px; font-size:12px; color:rgba(255,255,255,0.75);">
+                                <span class="shop-manager-field-title">Estoque mínimo <span class="shop-manager-low-stock-hint">(alerta de baixo estoque)</span></span>
                                 <input id="product-min-stock" type="number" name="min_stock" min="0" value="0"
                                     style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.05); color:#fff;" />
                             </label>
@@ -84,7 +84,7 @@
                                 style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.05); color:#fff;"></textarea>
                         </label>
 
-                        <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+                        <div class="shop-manager-actions" style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
                             <button type="submit" id="product-submit" class="btn-save" style="padding:12px 20px; gap:8px;">
                                 <svg id="product-submit-spinner" width="14" height="14" viewBox="0 0 24 24" fill="none"
                                     style="display:none; stroke:#fff; stroke-width:2.5; stroke-linecap:round; animation:spin .7s linear infinite;">

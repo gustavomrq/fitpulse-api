@@ -305,7 +305,7 @@
 
             </div>
 
-            <div style="display:flex; gap:10px; padding:0 22px 20px;">
+            <div class="eq-edit-modal__footer" style="display:flex; gap:10px; padding:0 22px 20px;">
                 <button type="button" class="shop-modal__btn-cancel" onclick="closeEditModal()">Cancelar</button>
                 <button type="button" id="eq-edit-confirm-btn" class="shop-modal__btn-confirm" onclick="confirmEdit()">
                     Salvar alterações
